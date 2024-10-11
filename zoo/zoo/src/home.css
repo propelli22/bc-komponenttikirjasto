@@ -1,0 +1,38 @@
+#home img {
+    width: 100%;
+    filter: brightness(50%);
+}
+
+#home img:hover {
+    filter: brightness(70%);
+}
+
+#home {
+    display: flex;
+}
+
+#animals-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#animals-p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#birds-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#birds-p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

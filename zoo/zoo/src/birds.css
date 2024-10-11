@@ -1,0 +1,38 @@
+#birds {
+    display: none;
+}
+
+#birds img {
+    width: 100%;
+}
+
+#b-information {
+    min-width: 50%;
+    max-width: 50%;
+}
+
+#b-information h2, #b-information p, #b-information ul {
+    padding: 10px;
+}
+
+#b-information li {
+    list-style-type: none;
+}
+
+#b-haettava {
+    background-color: rgb(8, 8, 53);
+    border: 3px solid rgb(69, 69, 150);
+    color: white;
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+#b-hakunappi {
+    background-color: rgb(5, 5, 29);
+    border: none;
+    height: 75px;
+    width: 150px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
