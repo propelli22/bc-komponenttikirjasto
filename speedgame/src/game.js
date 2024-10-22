@@ -10,18 +10,46 @@ function Game() {
         gameController(difficulty);
     }
 
+    let clickLog;
+
+    const logClick = () => {
+        // kirjaa clickLogiin mitä on clickattu
+    }
+
     // Kun käyttäjä painaa start game nappia, game controller aloittaa pelin, game controller hallitsee pelin etenemistä.
     // Seuraa palloja ja että niitä painetaan tietyn aikavälin sisään ja lisää silloin scorea.
     const gameController = (difficulty) => { 
+        let circle1 = document.getElementById("circle1");
+        let circle2 = document.getElementById("circle2");
+        let circle3 = document.getElementById("circle3");
         if (difficulty === 1) {
+            circle1.style.display = "block";
+            circle2.style.display = "none";
+            circle3.style.display = "none";
+            do {
+                // tyhjennä clickLog tässä
+                randomPoint();
+                circle1.addEventListener("click", logClick);
+                // TEE TÄSTÄ ETEENPÄIN
+                // DELAY TÄHÄN
+            }
+            while (clickLog.length === 1)
+        } else if (difficulty === 2) {
+            document.getElementById("circle1").style.display = "block";
+            document.getElementById("circle2").style.display = "block";
+            document.getElementById("circle3").style.display = "none";
             while (true) {
-                randomPoint()
+                randomPoint();
                 break;
             }
-        } else if (difficulty === 2) {
-
         } else if (difficulty === 3) {
-
+            document.getElementById("circle1").style.display = "block";
+            document.getElementById("circle2").style.display = "block";
+            document.getElementById("circle3").style.display = "block";
+            while (true) {
+                randomPoint();
+                break;
+            }
         } else {
             // ilmoita virheestä, difficulty voi olla vain välillä 0-3
         }
@@ -29,8 +57,12 @@ function Game() {
 
     const randomPoint = () => {
         const div = document.getElementById("game-container");
-        let korkeus = div.clientHeight;
-        let leveys = div.clientWidth;
+        let korkeus = div.clientHeight - 50;
+        let leveys = div.clientWidth - 50;
+
+        console.log(korkeus);
+        console.log(leveys);
+
         var x1 = Math.ceil(korkeus* Math.random());
         var y1 = Math.ceil(leveys* Math.random());
         var x2 = Math.ceil(korkeus* Math.random());
@@ -47,7 +79,7 @@ function Game() {
         const circle2 = document.getElementById("circle2");
         const circle3 = document.getElementById("circle3");
 
-        console.log(pos.x1);
+        console.log(pos);
 
         circle1.style.position = "absolute";
         circle1.style.left = `${pos.y1}px`;
@@ -55,8 +87,7 @@ function Game() {
 
         circle2.style.position = "absolute";
         circle2.style.left = `${pos.y2}px`;
-        circle2.style.top = `${pos.x2}px`;
-
+        circle2.style.top = `${pos.x2}px`
         circle3.style.position = "absolute";
         circle3.style.left = `${pos.y3}px`;
         circle3.style.top = `${pos.x3}px`;

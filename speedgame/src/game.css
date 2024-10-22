@@ -4,9 +4,12 @@
     width: 100%;
 }
 
+#game-container {
+    position: relative;
+}
+
 .circle {
     border-radius: 50%;
-    background-color: #e8b131; /* Pallojen värit: #32a852 #ca3de3 #e30b0b #488ddb #f1f520 #e8b131 */
     height: 50px;
     width: 50px;
 }
@@ -35,4 +38,20 @@
 .difficulty-button {
     width: 5vh;
     margin: 5px;
+}
+
+#circle1, #circle2, #circle3 {
+    display: none;
+}
+
+#circle1 {
+    background-color: #32a852;
+}
+
+#circle2 {
+    background-color: #ca3de3;
+}
+
+#circle3 {
+    background-color: #e30b0b;
 }
