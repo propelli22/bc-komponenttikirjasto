@@ -14,6 +14,7 @@ function Game() {
 
     const logClick = () => {
         // kirjaa clickLogiin mitä on clickattu
+        console.log("moi")
     }
 
     // Kun käyttäjä painaa start game nappia, game controller aloittaa pelin, game controller hallitsee pelin etenemistä.
@@ -22,18 +23,22 @@ function Game() {
         let circle1 = document.getElementById("circle1");
         let circle2 = document.getElementById("circle2");
         let circle3 = document.getElementById("circle3");
+
+        let timeout = 50000;
         if (difficulty === 1) {
             circle1.style.display = "block";
             circle2.style.display = "none";
             circle3.style.display = "none";
             do {
-                // tyhjennä clickLog tässä
+                clickLog = {};
                 randomPoint();
                 circle1.addEventListener("click", logClick);
                 // TEE TÄSTÄ ETEENPÄIN
                 // DELAY TÄHÄN
+                setTimeout(timeout);
+                console.log("jes");
             }
-            while (clickLog.length === 1)
+            while (clickLog.length === 0)
         } else if (difficulty === 2) {
             document.getElementById("circle1").style.display = "block";
             document.getElementById("circle2").style.display = "block";
