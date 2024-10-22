@@ -1,0 +1,38 @@
+.game {
+    border: 3px solid #e9ff5c; /* väliaikainen, visualisoi game alueen rajat */
+    height: 75vh;
+    width: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: #e8b131; /* Pallojen värit: #32a852 #ca3de3 #e30b0b #488ddb #f1f520 #e8b131 */
+    height: 50px;
+    width: 50px;
+}
+
+#start-game-container {
+    display: none; /* Kun laatikko näkyvissä, display = grid, kun piilossa, display = none */
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 50vh;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.start-game-container button {
+    margin-top: 10px;
+}
+
+#difficulty-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.difficulty-button {
+    width: 5vh;
+    margin: 5px;
+}
